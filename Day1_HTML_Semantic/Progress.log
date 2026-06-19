@@ -1,13 +1,60 @@
 // All i learn in day 1 (Semantic HTML)
+Semantic HTML is using a tag HTML that describing the content inside and the function of the element, not only for the looks.
+this also help Search Engine Optimization to read your website.
 
 1. 
 <header>
     <h1>For example</h1>
 </header>
 
-for header in website like logo, navigation, website title, and many more.
+for header or opening in website like logo, navigation, website title, and many more.
 
 2.
 <nav>
-    
+    <a href="#">Home</a>
+    <a href="#">Article</a>
+    <a href="#">Contact</a>
 </nav>
+
+for navigation link menu in website.
+
+3. 
+<main>
+    <h2>New Article</h2>
+</main>
+
+for the main content of the website. Only 1 main in 1 page.
+
+4. 
+<section>
+    <p>bla bla bla ...</p>
+</section>
+
+for a content with different theme. for example products and testimonials.
+
+5.
+<article>
+    <h1>News</h1>
+    <p>...</p>
+</article>
+
+for content like article, news, review, forum, and many more.
+
+6.
+<aside>
+    more article
+</aside>
+
+for content that not the main content. like ads, sidebar, and more.
+
+7. 
+<footer>
+    &copy writer 2026 - indonesia
+</footer>
+
+for the end content of the website. used to fill with social media, copyright, contact, and many more.
+
+
+
+
+// So CGPT taught me about hirerarchy which in website only 1 h1 that is good. everything aside is using h2.
