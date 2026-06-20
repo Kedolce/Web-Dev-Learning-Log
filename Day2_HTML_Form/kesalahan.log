@@ -1,0 +1,82 @@
+6. radio
+<input type="radio" /> Laki
+<input type="radio" /> Perempuan
+
+Ini yang paling penting untuk diperbaiki.
+
+Masalah=
+Kedua radio tidak mempunyai:
+
+name
+value
+label
+
+Akibatnya:
+
+Keduanya bisa dipilih bersamaan.
+Data tidak terkirim ke server.
+
+Seharusnya:
+
+<input type="radio" id="lk" name="gender" value="laki-laki">
+<label for="lk">Laki-laki</label>
+
+<input type="radio" id="pr" name="gender" value="perempuan">
+<label for="pr">Perempuan</label>
+Kenapa name harus sama?
+
+Karena:
+
+name="gender"
+
+membuat browser tahu bahwa kedua radio ini adalah satu kelompok.
+
+=======================================
+7. Checkbox
+
+Kamu menulis:
+
+<input type="checkbox" /> HTML
+<input type="checkbox" /> CSS
+<input type="checkbox" /> JavaScript
+
+Sudah benar secara tampilan.
+
+Tetapi untuk form nyata, perlu:
+
+id
+name
+value
+label
+
+Contoh:
+
+<input
+    type="checkbox"
+    id="html"
+    name="bahasa"
+    value="HTML">
+
+<label for="html">HTML</label>
+
+=======================================
+Kamu sudah mulai memahami:
+
+label
+id
+placeholder
+
+Tetapi masih sering lupa:
+
+name
+required
+value
+
+Padahal saat masuk PHP nanti:
+
+$_POST['nama']
+$_POST['email']
+
+sangat bergantung pada:
+
+name=""

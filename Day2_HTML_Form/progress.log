@@ -1,0 +1,83 @@
+//  Day 2 HTML form
+Form is box to all input element
+
+<form>
+<input type="text">
+</form>
+
+withput <form>, browser don't know this is form.
+
+<input> for receive input from user.
+<input type="text">
+
+
+*input attribute:
+
+-text, for short text like name, city, and more.
+
+-number, for number like age.
+
+-email, for email.
+
+-password, for password. the input can;t be seen (••••••••). (it's only the view, not make sure your password secure).
+
+-date, for date. (will show calendar).
+
+-checkbox, for many option like exam. 
+<input type="checkbox"> HTML
+<input type="checkbox"> CSS
+<input type="checkbox"> JavaScript
+
+-radio, same like checkbox, but user can only pick one. 
+**for related radio, must use the same name:
+
+<input type="radio" name="gender">
+<input type="radio" name="gender">
+
+if not, user can pick both at the same time.
+
+
+
+
+====================================
+**name
+name is data name that will send to the server.
+example : <input type="text" name="username">
+
+in PHP $_POST['username']
+
+**placeholder
+guidance for the user. example:
+<input type="email" placeholder="Masukkan email">
+
+**label
+for the input label. example:
+<label for="email">Email</label>
+<input type="email" id="email">
+
+**relationship betwee for and id in label and input
+
+<label for="username">
+<input id="username">
+
+if the user click label name, then input will focus.
+
+-textarea, for long text like opinion.
+
+-select and option, for choice.
+<select> //box
+    <option>Bandung</option> // 3 choice
+    <option>Jakarta</option>
+    <option>Bogor</option>
+</select>
+
+-required, must fill attribute.
+<input type="text" required>
+if null, browser will decline submit.
+
+-value, first value of input.
+<input type="text" value="Budi">
+
+<input type="radio"
+       name="gender"
+       value="L">
