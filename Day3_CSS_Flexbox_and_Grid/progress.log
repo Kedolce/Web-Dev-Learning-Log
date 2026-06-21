@@ -1,0 +1,162 @@
+========================================
+TANGGAL: 21 Juni 2026
+MATERI: CSS Layout (Flexbox & Grid)
+STATUS: SELESAI
+========================================
+
+# FLEXBOX
+
+## Konsep Dasar
+- Memahami bahwa Flexbox adalah layout 1 dimensi.
+- Flexbox digunakan ketika ingin mengatur elemen dalam satu arah (horizontal atau vertikal).
+- Memahami konsep parent (flex container) dan child (flex items).
+
+## Sintaks yang Dipelajari
+
+1. display: flex;
+- Mengubah elemen parent menjadi flex container.
+- Semua child akan tersusun secara horizontal secara default.
+
+2. justify-content
+- Mengatur posisi item pada main axis (horizontal secara default).
+- Nilai yang dipelajari:
+  - flex-start
+  - center
+  - flex-end
+  - space-between
+  - space-around
+  - space-evenly
+
+3. align-items
+- Mengatur posisi item pada cross axis (vertikal secara default).
+- Nilai yang dipelajari:
+  - flex-start
+  - center
+  - flex-end
+  - stretch
+
+4. gap
+- Memberikan jarak antar flex item.
+- Lebih baik daripada menggunakan margin untuk mengatur jarak antar item.
+
+## Studi Kasus
+- Membuat navbar menggunakan Flexbox.
+- Menggunakan:
+  - display: flex
+  - justify-content: space-between
+  - align-items: center
+  - gap
+
+==================================================
+
+# CSS GRID
+
+## Konsep Dasar
+- Memahami bahwa Grid adalah layout 2 dimensi.
+- Grid digunakan ketika ingin mengatur elemen berdasarkan baris dan kolom secara bersamaan.
+
+## Sintaks yang Dipelajari
+
+1. display: grid;
+- Mengubah elemen menjadi grid container.
+
+2. grid-template-columns
+- Menentukan jumlah dan ukuran kolom.
+
+Contoh:
+grid-template-columns: 200px 200px 200px;
+
+3. fr (fraction)
+- Membagi ruang kosong secara proporsional.
+
+Contoh:
+grid-template-columns: 1fr 1fr 1fr;
+
+4. repeat()
+- Menyingkat penulisan kolom atau baris.
+
+Contoh:
+grid-template-columns: repeat(3, 1fr);
+
+5. gap
+- Memberikan jarak antar grid item.
+
+6. grid-column
+- Membuat item menempati beberapa kolom.
+
+Contoh:
+grid-column: span 2;
+
+7. grid-row
+- Membuat item menempati beberapa baris.
+
+Contoh:
+grid-row: span 2;
+
+8. minmax()
+- Menentukan ukuran minimum dan maksimum suatu kolom/baris.
+
+Contoh:
+minmax(200px, 1fr)
+
+==================================================
+
+# PEMAHAMAN PENTING
+
+## Kapan Menggunakan Flexbox
+- Navbar
+- Menu navigasi
+- Tombol
+- Layout satu arah
+- Komponen kecil
+
+## Kapan Menggunakan Grid
+- Gallery
+- Dashboard
+- Product listing
+- Layout kompleks
+- Layout yang membutuhkan baris dan kolom sekaligus
+
+==================================================
+
+# PEMAHAMAN LANJUTAN GRID
+
+## justify-content
+- Mengatur posisi seluruh grid di dalam container secara horizontal.
+- Efeknya hanya terlihat jika ukuran grid lebih kecil daripada ukuran container.
+
+Contoh:
+Container = 1000px
+Grid = 400px
+
+Karena terdapat sisa ruang kosong, justify-content akan terlihat efeknya.
+
+## align-content
+- Mengatur posisi seluruh grid di dalam container secara vertikal.
+
+## justify-items
+- Mengatur posisi setiap item di dalam sel grid secara horizontal.
+
+## align-items
+- Mengatur posisi setiap item di dalam sel grid secara vertikal.
+
+Aturan sederhana:
+
+justify = horizontal
+align = vertical
+
+content = seluruh grid
+items = isi setiap sel
+
+==================================================
+
+# PROYEK LATIHAN
+
+1. Membuat navbar menggunakan Flexbox.
+2. Membuat layout 6 card menggunakan Grid.
+3. Menggunakan:
+   - repeat()
+   - fr
+   - gap
+   - justify-content
+   - align-items

@@ -1,0 +1,61 @@
+========================================
+TANGGAL: 21 Juni 2026
+MATERI: CSS Layout (Flexbox & Grid)
+========================================
+
+1. Masih kurang memahami perbedaan:
+   - justify-content
+   - align-items
+   pada CSS Grid.
+
+Solusi:
+- Ingat bahwa:
+  content = seluruh grid
+  items = isi setiap sel
+
+2. Menggunakan:
+   justify-content: center;
+   pada grid dengan:
+   grid-template-columns: repeat(3, 1fr);
+
+Masalah:
+- Efek justify-content tidak terlihat karena seluruh kolom sudah memenuhi container.
+
+Solusi:
+- justify-content hanya berguna jika ukuran grid lebih kecil dari ukuran container.
+
+3. Memberikan width tetap pada grid item.
+
+Contoh:
+.box {
+    width: 200px;
+}
+
+Masalah:
+- Grid tidak dapat mengatur lebar item secara penuh.
+
+Solusi:
+- Biarkan Grid mengatur lebar item.
+- Hindari memberi width tetap jika tidak diperlukan.
+
+4. Menggunakan:
+height: 1000px;
+
+Masalah:
+- Tinggi tetap jarang digunakan pada layout nyata.
+
+Solusi:
+- Gunakan tinggi otomatis atau min-height jika diperlukan.
+
+==================================================
+
+# HAL YANG HARUS DIINGAT
+
+- Flexbox = 1 dimensi.
+- Grid = 2 dimensi.
+- justify = horizontal.
+- align = vertical.
+- content = seluruh grid.
+- items = isi setiap sel.
+- Gunakan Grid ketika membutuhkan baris dan kolom sekaligus.
+- Gunakan Flexbox ketika hanya membutuhkan satu arah layout.
