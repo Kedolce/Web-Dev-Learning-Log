@@ -1,0 +1,282 @@
+# HARI 5 - JavaScript DOM (Lanjutan)
+
+## Materi yang Dipelajari
+
+### 1. `getElementById()`
+
+* Mengambil elemen HTML berdasarkan atribut `id`.
+* Sintaks:
+
+```javascript
+document.getElementById("namaId");
+```
+
+### Konsep yang Dipahami
+
+* `getElementById()` hanya digunakan untuk mencari elemen berdasarkan `id`.
+* Tidak menggunakan `#` seperti pada `querySelector()`.
+* Cocok digunakan ketika elemen bersifat unik.
+* Jika elemen tidak ditemukan, method akan mengembalikan `null`.
+
+---
+
+### 2. `textContent`
+
+* Digunakan untuk mengambil atau mengubah isi teks dari suatu elemen.
+
+#### Sintaks:
+
+```javascript
+element.textContent
+```
+
+atau
+
+```javascript
+element.textContent = "Teks Baru";
+```
+
+### Konsep yang Dipahami
+
+* Dapat digunakan untuk membaca isi teks suatu elemen.
+* Dapat digunakan untuk mengganti isi teks suatu elemen.
+* Hanya memproses teks biasa.
+* Tag HTML yang dimasukkan akan dianggap sebagai teks, bukan elemen HTML.
+
+Contoh:
+
+```javascript
+judul.textContent = "<h1>Hello</h1>";
+```
+
+Output:
+
+```text
+<h1>Hello</h1>
+```
+
+---
+
+### 3. `innerHTML`
+
+* Digunakan untuk mengambil atau mengubah isi HTML di dalam suatu elemen.
+
+#### Sintaks:
+
+```javascript
+element.innerHTML
+```
+
+atau
+
+```javascript
+element.innerHTML = "<p>Hello</p>";
+```
+
+### Konsep yang Dipahami
+
+* Dapat membaca seluruh isi HTML beserta tag-nya.
+* Dapat menambahkan elemen HTML baru menggunakan string HTML.
+* Saat menggunakan operator `=`, seluruh isi lama akan diganti.
+* Dapat menggunakan operator `+=` untuk menambahkan konten tanpa menghapus konten lama.
+
+Contoh:
+
+```javascript
+container.innerHTML += "<p>Hello</p>";
+```
+
+---
+
+### 4. `style`
+
+* Digunakan untuk mengubah CSS secara langsung melalui JavaScript.
+
+#### Sintaks:
+
+```javascript
+element.style.property = "value";
+```
+
+Contoh:
+
+```javascript
+judul.style.color = "red";
+judul.style.fontSize = "40px";
+```
+
+### Konsep yang Dipahami
+
+* CSS pada JavaScript menggunakan format camelCase.
+* Contoh:
+
+| CSS              | JavaScript      |
+| ---------------- | --------------- |
+| background-color | backgroundColor |
+| font-size        | fontSize        |
+| border-radius    | borderRadius    |
+
+* `style` menghasilkan inline CSS.
+* Inline CSS memiliki prioritas lebih tinggi daripada class CSS biasa.
+* Untuk project Tailwind, penggunaan `classList` lebih direkomendasikan dibanding `style`.
+
+---
+
+### 5. `classList`
+
+* Digunakan untuk memanipulasi class CSS suatu elemen.
+
+#### Method yang Dipelajari
+
+##### Menambahkan class
+
+```javascript
+element.classList.add("class-name");
+```
+
+##### Menghapus class
+
+```javascript
+element.classList.remove("class-name");
+```
+
+##### Menambah/menghapus class secara otomatis
+
+```javascript
+element.classList.toggle("class-name");
+```
+
+##### Mengecek keberadaan class
+
+```javascript
+element.classList.contains("class-name");
+```
+
+### Konsep yang Dipahami
+
+* Sangat cocok digunakan bersama Tailwind CSS.
+* Mempermudah pembuatan:
+
+  * Navbar mobile
+  * Sidebar
+  * Modal
+  * Dropdown
+  * Dark Mode
+* Saat menggunakan `classList`, nama class tidak menggunakan `.`.
+
+Benar:
+
+```javascript
+element.classList.add("bg-blue-500");
+```
+
+Salah:
+
+```javascript
+element.classList.add(".bg-blue-500");
+```
+
+---
+
+### 6. `createElement()`
+
+* Digunakan untuk membuat elemen HTML baru melalui JavaScript.
+
+#### Sintaks:
+
+```javascript
+document.createElement("tag");
+```
+
+Contoh:
+
+```javascript
+const p = document.createElement("p");
+```
+
+### Konsep yang Dipahami
+
+* Elemen yang dibuat belum muncul di browser.
+* Elemen baru hanya dibuat di memori JavaScript.
+* Elemen perlu dimasukkan ke DOM menggunakan `appendChild()` agar dapat tampil di browser.
+
+---
+
+### 7. `appendChild()`
+
+* Digunakan untuk menambahkan elemen baru ke dalam DOM.
+
+#### Sintaks:
+
+```javascript
+parent.appendChild(child);
+```
+
+Contoh:
+
+```javascript
+container.appendChild(p);
+```
+
+### Konsep yang Dipahami
+
+* `parent` adalah elemen induk.
+* `child` adalah elemen yang akan ditambahkan.
+* Setiap pemanggilan `appendChild()` akan menambahkan elemen baru ke dalam parent.
+* Sangat sering digunakan bersama `createElement()`.
+
+Alur umum:
+
+```javascript
+const p = document.createElement("p");
+p.textContent = "Hello";
+container.appendChild(p);
+```
+
+---
+
+### 8. `remove()`
+
+* Digunakan untuk menghapus elemen dari DOM.
+
+#### Sintaks:
+
+```javascript
+element.remove();
+```
+
+Contoh:
+
+```javascript
+pesan.remove();
+```
+
+### Konsep yang Dipahami
+
+* `remove()` tidak menerima parameter.
+* Elemen yang dihapus adalah elemen yang memanggil method tersebut.
+* Jika ingin menghapus seluruh container:
+
+```javascript
+container.remove();
+```
+
+* Jika ingin menghapus hanya paragraf:
+
+```javascript
+pesan.remove();
+```
+
+* Setelah elemen dihapus, elemen tersebut tidak lagi berada di DOM.
+
+---
+
+## Mini Praktik yang Telah Dikerjakan
+
+* Mengubah teks menggunakan `textContent`.
+* Menambahkan konten HTML menggunakan `innerHTML`.
+* Mengubah style menggunakan `style`.
+* Menambah dan menghapus class menggunakan `classList.toggle()`.
+* Membuat elemen baru menggunakan `createElement()`.
+* Menambahkan elemen ke halaman menggunakan `appendChild()`.
+* Menghapus elemen menggunakan `remove()`.
