@@ -5,13 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Day 5 DOM</title>
   </head>
-  <body class="bg-cyan-200 p-10">
+  <body class=" p-10">
     
-    <div id="container">
-      <p id="pesan">Ini adalah pesan.</p>
+    <!--Ubah Judul-->
+    <div class="bg-cyan-200">
+      <h1 id="ubahJudul">Belajar Javascript</h1>
+      <button id="btnUbahJudul">Ubah Judul</button>
+    </div>
+    <!----------------------------------------------------->
+
+    <!--Dark Mode-->
+    <div class="bg-amber-200">
+      <button id="btnUbahWarnaBody">Ubah Warna Body</button>
+    </div>
+    <!----------------------------------------------------->
+
+    <!--Popup berhasil-->
+    <form action="" class="bg-purple-200">
+      <label for="">Nama : </label>
+      <input type="text" class="border">
+      <button id="btnKirim" class="border" type="button">Kirim</button>
+    </form>
+
+    <div class="hidden" id="popup">
+      <button id="hapusPopup">X</button>
+      <p>Berhasil coy!!</p>
+    </div>
+    <!----------------------------------------------------->
+
+    <!--Tambah Pesan-->
+    <div class="bg-red-200" id="tambahPesan">
+      <button id="btnTambahPesan">Tambah Pesan</button>
+      <button id="btnHapusTerakhir">Hapus Pesan terakhir</button>
     </div>
 
-    <button id="btnHapus">Hapus Pesan</button>
+
 
     <script type="module" src="/src/main.js"></script>
     <script src="/js/Day5.js"></script>
