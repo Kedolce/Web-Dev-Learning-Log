@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object</title>
+  </head>
+  <body>
+    <header>
+      <hr class="my-4" />
+      <h1 class="font-bold text-xl text-emerald-400 text-center">
+        NovaCart Admin
+      </h1>
+      <hr class="my-4" />
+    </header>
+
+    <main>
+      <div id="dataBarang" class="max-w-[90vw] mx-auto border border-emerald-400 rounded-lg p-4 my-4">
+        <h2 class="namaBarang"></h2>
+        <h2 class="hargaBarang"></h2>
+        <h2 class="stokBarang"></h2>
+        <h2 class="kategoriBarang"></h2>
+      </div>
+
+      <div id="btnContainer">
+        <button class="border mx-2 rounded-lg p-2 tambahStok">
+          Tambah Stok
+        </button>
+        <button class="border mx-2 rounded-lg p-2 kurangiStok">
+          Kurangi Stok
+        </button>
+        <button class="border mx-2 rounded-lg p-2 diskon">diskon 10%</button>
+        <button class="border mx-2 rounded-lg p-2 reset">reset harga</button>
+      </div>
+
+      <h3 class="status my-4"></h3>
+    </main>
+
+    <script src="/js/Day10.js"></script>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
